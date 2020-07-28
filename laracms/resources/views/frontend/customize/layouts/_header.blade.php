@@ -27,10 +27,10 @@ $currentChildNavigations = frontend_current_child_navigation('desktop');
             @endforeach
         </ul>
         <ul class="layui-nav layui-nav-tree layui-nav-side layui-hide-lg layui-hide-md layui-hide-xs" style="top:60px;right:0px;left: unset;background-color:#393D49">
-            <li class="layui-nav-item"><a href="/">首页</a></li>
+            <li class="layui-nav-item"><a href="/" style="color: rgba(255,255,255,.7)">首页</a></li>
             @foreach($navigations as $navigation)
-            <li class="layui-nav-item">
-                <a target="{{ $navigation->target }}" href="{{$navigation->link}}">{{ $navigation->title }}</a>
+            <li class="layui-nav-item" style="color: rgba(255,255,255,.7)">
+                <a target="{{ $navigation->target }}" href="{{$navigation->link}}" style="color: rgba(255,255,255,.7)">{{ $navigation->title }}</a>
                 @if($navigation->child)
                 <dl class="layui-nav-child">
                     @foreach($navigation->child as $nav)
