@@ -8,7 +8,7 @@ $currentChildNavigations = frontend_current_child_navigation('desktop');
 
 <div class="fly-header">
     <div class="layui-container layui-layout-admin">
-        <a class="fly-logo" href="/"><img src="{{asset('images/logo.png')}}" alt="layui"></a>
+        <a class="fly-logo" href="/"><img src="{{asset('image/logo.png')}}" alt="layui"></a>
 
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item"><a href="/">首页</a></li>
