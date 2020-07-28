@@ -19,8 +19,7 @@
                 @foreach($block->data as $item)
                 <div>
                     <a target="{{$item->target}}" href="{{$item->link}}">
-                        {{-- <img src="{{ storage_image_url($item->image) }}"> --}}
-                        <img src="https://a1.cdn.91360.com/storage/media/4784/conversions/pQSd6VbBZQTK6iOwUTJC0wgoYQLdnWRykh6kIxoT-show.jpg" alt="" srcset="">
+                        <img src="{{ storage_image_url($item->image) }}">
                     </a></div>
                 @endforeach
             </div>
@@ -32,9 +31,7 @@
                 @foreach($block->data as $item)
                 <div>
                     <a target="{{$item->target}}" href="{{$item->link}}">
-                        {{-- <img src="{{ storage_image_url($item->image) }}"> --}}
-                        <img src="https://a1.cdn.91360.com/storage/media/4784/conversions/pQSd6VbBZQTK6iOwUTJC0wgoYQLdnWRykh6kIxoT-show.jpg"
-                            alt="" srcset="">
+                        <img src="{{ storage_image_url($item->image) }}" alt="" srcset="">
                     </a></div>
                 @endforeach
             </div>
