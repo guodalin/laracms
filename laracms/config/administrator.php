@@ -25,10 +25,10 @@ return [
     'paginate' => [
         'limit' => 15,
     ],
-    
+
     // ueditor , simditor
     'editor' => 'simditor',
-    
+
     /**
      * 后台菜单数组
      */
@@ -133,16 +133,16 @@ return [
                     "params" => ['desktop'],
                     "query" => [],
                 ],
-                "website.wechat" => [
-                    "id" => "website.wechat",
-                    "text" => "微信管理",
-                    "permission" => function(){ return Auth::user()->can('manage_wechat'); },
-                    "icon" => "icon-wechat",
-                    "link" => "",
-                    "route" => "wechats.index",
-                    "params" => [],
-                    "query" => [],
-                ],
+                // "website.wechat" => [
+                //     "id" => "website.wechat",
+                //     "text" => "微信管理",
+                //     "permission" => function(){ return Auth::user()->can('manage_wechat'); },
+                //     "icon" => "icon-wechat",
+                //     "link" => "",
+                //     "route" => "wechats.index",
+                //     "params" => [],
+                //     "query" => [],
+                // ],
 
             ],
         ],
@@ -225,16 +225,16 @@ return [
                     "params" => [],
                     "query" => [],
                 ],
-                "content.form.feedback" => [
-                    "id" => "content.form.feedback",
-                    "text" => "意见反馈",
-                    "permission" => function(){ return Auth::user()->can('manage_form'); },
-                    "icon" => "icon-envelope-alt",
-                    "link" => "",
-                    "route" => "form.index",
-                    "params" => ['feedback'],
-                    "query" => [],
-                ],
+                // "content.form.feedback" => [
+                //     "id" => "content.form.feedback",
+                //     "text" => "意见反馈",
+                //     "permission" => function(){ return Auth::user()->can('manage_form'); },
+                //     "icon" => "icon-envelope-alt",
+                //     "link" => "",
+                //     "route" => "form.index",
+                //     "params" => ['feedback'],
+                //     "query" => [],
+                // ],
                 /*
                 "content.annex" => [
                     "id" => "content.annex",

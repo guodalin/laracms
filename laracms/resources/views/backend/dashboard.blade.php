@@ -9,7 +9,7 @@
 @section('content')
 
     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        {{-- <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box bg-info">
                 <div class="info-box-icon">
                     <i class="icon icon-file-text"></i>
@@ -17,7 +17,6 @@
                 <div class="info-box-content">
                     <span class="info-box-text">新增订单</span>
                     <span class="info-box-number">320
-                        {{--<small>单</small>--}}
                     </span>
                 </div>
             </div>
@@ -30,7 +29,6 @@
                 <div class="info-box-content">
                     <span class="info-box-text">新增用户</span>
                     <span class="info-box-number">90
-                        {{--<small>个</small>--}}
                     </span>
                 </div>
             </div>
@@ -43,12 +41,11 @@
                 <div class="info-box-content">
                     <span class="info-box-text">在售商品</span>
                     <span class="info-box-number">129
-                        {{--<small>种</small>--}}
                     </span>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        </div> --}}
+        {{-- <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box bg-danger">
                 <div class="info-box-icon">
                     <i class="icon icon-eye-open"></i>
@@ -56,11 +53,10 @@
                 <div class="info-box-content">
                     <span class="info-box-text">库存预警</span>
                     <span class="info-box-number">66
-                        {{--<small>元</small>--}}
                     </span>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <div class="row">
