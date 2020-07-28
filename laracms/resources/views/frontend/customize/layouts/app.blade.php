@@ -19,6 +19,7 @@
         <!-- Styles -->
         <link href="{{asset('vendor/laracms/plugins/layui/css/layui.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('vendor/laracms/css/website.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/index.css')}}" rel="stylesheet" type="text/css">
         <link rel="apple-touch-icon" href="/favicon.ico">
         <link rel="shortcut icon" href="/favicon.ico">
         @yield('styles')

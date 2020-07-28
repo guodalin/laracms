@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div class="layui-row layui-col-space15">
+    <div class="layui-row ">
         <div class="layui-col-md12 layui-col-xs12">
             @php
             $block = get_block("2018_03_04_234810_index_enterprise_news_block");
@@ -93,7 +93,7 @@
     </div>
 </div>
 
-<div class="layui-col-md12 layui-col-xs12">
+<div class="layui-col-md12 layui-col-xs12" style="margin-top:30px">
     @php
     $block = get_block("2018_03_04_235036_index_case_news_block");
     $category_id = get_block_params($block->content, 'category_id', 0);

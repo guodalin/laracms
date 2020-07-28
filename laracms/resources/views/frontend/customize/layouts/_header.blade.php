@@ -6,15 +6,15 @@ $navigations = frontend_navigation('desktop');
 $currentChildNavigations = frontend_current_child_navigation('desktop');
 @endphp
 
-<div class="fly-header layui-bg-black">
+<div class="fly-header">
     <div class="layui-container layui-layout-admin">
-        <a class="fly-logo" href="/"><img src="{{asset('vendor/laracms/images/logo2.png')}}" alt="layui"></a>
+        <a class="fly-logo" href="/"><img src="{{asset('images/logo.png')}}" alt="layui"></a>
 
         <ul class="layui-nav fly-nav layui-hide-xs">
             <li class="layui-nav-item"><a href="/">首页</a></li>
 
             @foreach($navigations as $navigation)
-            <li class="layui-nav-item">
+            <li class="layui-nav-item" style="color: #000">
                 <a target="{{ $navigation->target }}" href="{{$navigation->link}}">{{ $navigation->title }}</a>
                 @if($navigation->child)
                 <dl class="layui-nav-child">
@@ -29,7 +29,7 @@ $currentChildNavigations = frontend_current_child_navigation('desktop');
         <ul class="layui-nav layui-nav-tree layui-nav-side layui-hide-lg layui-hide-md layui-hide-xs" style="top:60px;right:0px;left: unset;background-color:#393D49">
             <li class="layui-nav-item"><a href="/">首页</a></li>
             @foreach($navigations as $navigation)
-            <li class="layui-nav-item">
+            <li class="layui-nav-item" style="color: #000">
                 <a target="{{ $navigation->target }}" href="{{$navigation->link}}">{{ $navigation->title }}</a>
                 @if($navigation->child)
                 <dl class="layui-nav-child">
