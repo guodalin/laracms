@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<div class="layui-container">
+<div class="layui-container-fulid">
     <div class="fly-panel">
         @php
         $block = get_block("2018_03_04_224524_index_slide_block");
@@ -19,7 +19,7 @@
                 @foreach($block->data as $item)
                 <div>
                     <a target="{{$item->target}}" href="{{$item->link}}">
-                        <img src="{{ storage_image_url($item->image) }}">
+                        <img src="{{ storage_image_url($item->image) }}" alt="" srcset="">
                     </a></div>
                 @endforeach
             </div>
@@ -139,6 +139,7 @@
             carousel.render({
                 elem: '#promo',
                 width: '100%', //设置容器宽度
+                height: '550px',
                 arrow: 'always', //始终显示箭头
                 //anim: 'updown' //切换动画方式
             });
