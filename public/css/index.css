@@ -3,3 +3,5 @@
 .fly-header{border-bottom:none;background-color: #fff;}
 /* .welcome-content{margin-top: 20px;} */
 .layui-nav .layui-nav-item a:hover, .layui-nav .layui-this a{color: #000;}
+.fly-logo{top: 15px;left:0px;}
+.fly-footer{padding-bottom: 20px;background-color: #000;}
