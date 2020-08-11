@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<div class="layui-container-fulid">
+<div class="layui-container">
     <div class="fly-panel">
         @php
         $block = get_block("2018_03_04_224524_index_slide_block");
@@ -139,7 +139,7 @@
             carousel.render({
                 elem: '#promo',
                 width: '100%', //设置容器宽度
-                height: '550px',
+                height: '340px',
                 arrow: 'always', //始终显示箭头
                 //anim: 'updown' //切换动画方式
             });
