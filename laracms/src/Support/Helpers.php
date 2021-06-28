@@ -568,9 +568,9 @@ if(!function_exists("get_block")){
 
         $block = \Cache::get($key);
 
-        if( \App::environment('production') && $block ){
-            return $block;
-        }
+        // if( \App::environment('production') && $block ){
+        //     return $block;
+        // }
 
         $block =  app(\Wanglelecc\Laracms\Handlers\BlockHandler::class)->getBlockData($object_id);
 
