@@ -73,7 +73,7 @@
                 <div class="layui-col-md3 layui-col-xs12">
                     <div class="" style="width:90%;margin:0 auto;border:1px solid #dbdbdb;margin-top:15px">
                         <a href="{{$item->getLink(2,$category_id)}}">
-                            <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;">
+                            <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;min-height:190px;">
                             <p class="layui-text layui-elip">{{$item->title}}</p>
                             {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
                         </a>
@@ -106,7 +106,7 @@
         <div class="layui-col-md3 layui-col-xs12">
             <div class="" style="width:90%;margin:0 auto;border:1px solid #dbdbdb;margin-top:15px">
                 <a href="{{$item->getLink(3,$category_id)}}">
-                    <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;">
+                    <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;min-height:190px;">
                     <p class="layui-text layui-elip">{{$item->title}}</p>
                 </a>
                 {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
