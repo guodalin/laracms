@@ -5,3 +5,6 @@
 .layui-nav .layui-nav-item a:hover, .layui-nav .layui-this a{color: #000;}
 .fly-logo{top: 15px;left:0px;}
 .fly-footer{padding-bottom: 20px;background-color: #000;}
+.layui-text{font-size:16px;margin: 10px 5px;}
+.fly-filter{padding:15px 0px 0px 0px;border-bottom: none;}
+.home-more *{padding: 0 60px;}

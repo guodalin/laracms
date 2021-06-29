@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<div class="layui-container">
+<div class="layui-container-fluid">
     <div class="fly-panel">
         @php
         $block = get_block("2018_03_04_224524_index_slide_block");
@@ -64,29 +64,30 @@
             $category_id = get_block_params($block->content, 'category_id', 0);
             @endphp
             <div class="fly-panel layui-col-space5">
-                <div class="fly-panel-title fly-filter">
+                <div class="fly-panel-title fly-filter" style="text-align: center;font-size:30px;">
                     <a>{{$block->title}}</a>
-                    <a href="{{$block->more_link}}" class="laypage-next layui-layout-right">{{$block->more_title}}
-                        >></a>
                 </div>
                 @if(isset($block->data) && $block->data)
-                {{--  <dl class="fly-panel fly-list-one">  --}}
+                <dl class="fly-panel fly-list-one">
                 @foreach($block->data as $item)
-                <div class="layui-col-md3 layui-col-xs6">
-                    <a href="{{$item->getLink(2,$category_id)}}">
-                        <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;">
-                        <p class="layui-text layui-elip">{{$item->title}}</p>
-                        {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
-                    </a>
+                <div class="layui-col-md3 layui-col-xs12">
+                    <div class="" style="width:90%;margin:0 auto;border:1px solid #dbdbdb;margin-top:15px">
+                        <a href="{{$item->getLink(2,$category_id)}}">
+                            <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;">
+                            <p class="layui-text layui-elip">{{$item->title}}</p>
+                            {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
+                        </a>
+                    </div>
+
                 </div>
                 @endforeach
-                {{--  </dl>  --}}
+                </dl>
                 @endif
-                {{--  <div style="text-align: center">
-                        <div class="laypage-main"> <a href="{{$block->more_link}}"
-                class="laypage-next">{{$block->more_title}}</a>
-            </div>
-        </div> --}}
+                <div style="text-align: center">
+                    <div class="laypage-main home-more">
+                        <a href="{{$block->more_link}}" class="laypage-next layui-btn layui-btn-lg">{{$block->more_title}}</a>
+                    </div>
+                </div>
     </div>
 </div>
 
@@ -96,26 +97,28 @@
     $category_id = get_block_params($block->content, 'category_id', 0);
     @endphp
     <div class="fly-panel layui-col-space5">
-        <div class="fly-panel-title fly-filter">
+        <div class="fly-panel-title fly-filter" style="text-align: center;font-size:30px;">
             <a>{{$block->title}}</a>
-            <a href="{{$block->more_link}}" class="laypage-next layui-layout-right">{{$block->more_title}} >></a>
+            {{--  <a href="{{$block->more_link}}" class="laypage-next layui-layout-right">{{$block->more_title}} >></a>  --}}
         </div>
         @if($block->data)
         @foreach($block->data as $item)
-        <div class="layui-col-md3 layui-col-xs6">
-            <a href="{{$item->getLink(3,$category_id)}}">
-                <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;">
-                <p class="layui-text layui-elip">{{$item->title}}</p>
-            </a>
-            {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
+        <div class="layui-col-md3 layui-col-xs12">
+            <div class="" style="width:90%;margin:0 auto;border:1px solid #dbdbdb;margin-top:15px">
+                <a href="{{$item->getLink(3,$category_id)}}">
+                    <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;">
+                    <p class="layui-text layui-elip">{{$item->title}}</p>
+                </a>
+                {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
+            </div>
         </div>
         @endforeach
         @endif
-        {{-- <div style="text-align: center">
-                        <div class="laypage-main"> <a href="{{$block->more_link}}"
-        class="laypage-next">{{$block->more_title}}</a>
-    </div>
-</div> --}}
+        <div style="text-align: center">
+            <div class="laypage-main home-more">
+                <a href="{{$block->more_link}}" class="laypage-next layui-btn layui-btn-lg">{{$block->more_title}}</a>
+            </div>
+        </div>
 </div>
 </div>
 
@@ -139,7 +142,7 @@
             carousel.render({
                 elem: '#promo',
                 width: '100%', //设置容器宽度
-                height: '340px',
+                height: '520px',
                 arrow: 'always', //始终显示箭头
                 //anim: 'updown' //切换动画方式
             });
