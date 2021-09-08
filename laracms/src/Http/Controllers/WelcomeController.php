@@ -17,6 +17,7 @@ namespace Wanglelecc\Laracms\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Wanglelecc\Laracms\Models\Article;
+use Wanglelecc\Laracms\Models\Category;
 
 /**
  * 前台公共控制器
@@ -33,7 +34,11 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return frontend_view('welcome');
+        $block = get_block("2018_03_04_235036_index_case_news_block");
+        $category_id = get_block_params($block->content, 'category_id', 0);
+        $category = Category::find($category_id);
+        $children = $category->children();
+        return frontend_view('welcome', compact('children'));
     }
 
     /**

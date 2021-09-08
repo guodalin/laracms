@@ -133,16 +133,6 @@ return [
                     "params" => ['desktop'],
                     "query" => [],
                 ],
-                // "website.wechat" => [
-                //     "id" => "website.wechat",
-                //     "text" => "微信管理",
-                //     "permission" => function(){ return Auth::user()->can('manage_wechat'); },
-                //     "icon" => "icon-wechat",
-                //     "link" => "",
-                //     "route" => "wechats.index",
-                //     "params" => [],
-                //     "query" => [],
-                // ],
 
             ],
         ],

@@ -41,7 +41,7 @@
 </div>
 <div class="layui-container">
 
-    <div class="fly-panel">
+    {{--  <div class="fly-panel">
         @php
         $block = get_block("2018_03_04_224524_index_slide_block");
         @endphp
@@ -50,12 +50,12 @@
             <div carousel-item="">
                 @foreach($block->data as $item)
                 <div><a target="{{$item->target}}" href="{{$item->link}}"><img
-                            src="{{ storage_image_url($item->image) }}"></a></div>
-                @endforeach
-            </div>
-            @endif
-        </div>
-    </div>
+        src="{{ storage_image_url($item->image) }}"></a></div>
+@endforeach
+</div>
+@endif
+</div>
+</div> --}}
 
     <div class="layui-row ">
         <div class="layui-col-md12 layui-col-xs12">
@@ -69,18 +69,19 @@
                 </div>
                 @if(isset($block->data) && $block->data)
                 <dl class="fly-panel fly-list-one">
-                @foreach($block->data as $item)
-                <div class="layui-col-md3 layui-col-xs12">
-                    <div class="" style="width:90%;margin:0 auto;border:1px solid #dbdbdb;margin-top:15px">
-                        <a href="{{$item->getLink(2,$category_id)}}">
-                            <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;min-height:190px;">
-                            <p class="layui-text layui-elip">{{$item->title}}</p>
-                            {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
-                        </a>
-                    </div>
+                    @foreach($block->data as $item)
+                    <div class="layui-col-md3 layui-col-xs12">
+                        <div class="" style="width:90%;margin:0 auto;border:1px solid #dbdbdb;margin-top:15px">
+                            <a href="{{$item->getLink(2,$category_id)}}">
+                                <img src="{{ storage_image_url($item->thumb) }}"
+                                    style="width:100%;max-height:190px;min-height:190px;">
+                                <p class="layui-text layui-elip">{{$item->title}}</p>
+                                {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
+                            </a>
+                        </div>
 
-                </div>
-                @endforeach
+                    </div>
+                    @endforeach
                 </dl>
                 @endif
                 <div style="text-align: center">
@@ -88,18 +89,16 @@
                         <a href="{{$block->more_link}}" class="laypage-next layui-btn layui-btn-lg">{{$block->more_title}}</a>
                     </div>
                 </div>
-    </div>
-</div>
+            </div>
 
-<div class="layui-col-md12 layui-col-xs12" style="margin-top:30px">
-    @php
-    $block = get_block("2018_03_04_235036_index_case_news_block");
-    $category_id = get_block_params($block->content, 'category_id', 0);
-    @endphp
-    <div class="fly-panel layui-col-space5">
-        <div class="fly-panel-title fly-filter" style="text-align: center;font-size:30px;">
-            <a>{{$block->title}}</a>
-            {{--  <a href="{{$block->more_link}}" class="laypage-next layui-layout-right">{{$block->more_title}} >></a>  --}}
+        {{--  <div class="layui-col-md12 layui-col-xs12" style="margin-top:30px">
+        @php
+        $block = get_block("2018_03_04_235036_index_case_news_block");
+        $category_id = get_block_params($block->content, 'category_id', 0);
+        @endphp
+        <div class="fly-panel layui-col-space5">
+            <div class="fly-panel-title fly-filter" style="text-align: center;font-size:30px;">
+                <a>{{$block->title}}</a>
         </div>
         @if($block->data)
         @foreach($block->data as $item)
@@ -109,7 +108,6 @@
                     <img src="{{ storage_image_url($item->thumb) }}" style="width:100%;max-height:190px;min-height:190px;">
                     <p class="layui-text layui-elip">{{$item->title}}</p>
                 </a>
-                {{--  <span><i class="iconfont icon-liulanyanjing"></i> {{$item->views}}</span> --}}
             </div>
         </div>
         @endforeach
@@ -119,15 +117,42 @@
                 <a href="{{$block->more_link}}" class="laypage-next layui-btn layui-btn-lg">{{$block->more_title}}</a>
             </div>
         </div>
-</div>
-</div>
-
-{{--<div class="layui-col-md4">--}}
-{{--@include('frontend::layouts._side')--}}
-{{--</div>--}}
-
-
-</div>
+        </div>
+        </div> --}}
+        <div class="layui-col-md12 layui-col-xs12">
+            @php
+            $block = get_block("2018_03_04_235036_index_case_news_block");
+            $category_id = get_block_params($block->content, 'category_id', 0);
+            @endphp
+            <div class="list default_pos transition clearfixed wrap">
+                <div class="fly-panel-title fly-filter" style="text-align: center;font-size:30px;padding-bottom:15px;">
+                    <a>{{$block->title}}</a>
+                </div>
+                <ul class="clearfix layui-col-xs12">
+                    @foreach($children as $child)
+                    <li class="layui-col-xs12">
+                        <div class="txt">
+                            <div>
+                                <dl><a href="{{ route('article.child',[request('navigation',0),$child->id]) }}"
+                                        style="color:#fff;">
+                                        <dt>{{$child->name}}</dt>
+                                    </a>
+                                    <dd>
+                                    </dd>
+                                </dl>
+                                {{--  <a href="{{ route('article.child',[request('navigation',0),$child->id]) }}" class="more">更多</a>  --}}
+                            </div>
+                            <span class="tri"></span>
+                        </div>
+                        <div class="img"><a href="{{ route('article.child',[request('navigation',0),$child->id]) }}">
+                                <div class="bg transition"></div>
+                            </a></div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection
@@ -144,14 +169,14 @@
                 width: '100%', //设置容器宽度
                 height: '520px',
                 arrow: 'always', //始终显示箭头
-                //anim: 'updown' //切换动画方式
+                anim: 'fade' //切换动画方式,anim: 'fade'
             });
             carousel.render({
                 elem: '#promo1',
                 width: '100%', //设置容器宽度
                 height: "140px",
                 arrow: 'always', //始终显示箭头
-                //anim: 'updown' //切换动画方式
+                anim: 'fade' //切换动画方式
             });
 
             //事件
