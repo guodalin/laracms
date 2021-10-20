@@ -38,7 +38,7 @@ min-height:230px;
 }
  .list ul li .txt > div dl { color:#fff;}
  .list ul li .txt > div dl dt{ height:70px; padding-left:70px; line-height:70px;}
- .list ul li .txt > div dl dt { font-size:26px; font-weight:bold; color:#fff;background:url("http://www.simcere.com/images/icon01.png") no-repeat left center;}
+ .list ul li .txt > div dl dt { font-size:26px; font-weight:bold; color:#fff;background:url("../image/touxi.png") no-repeat left center;}
  .list ul li .txt > div dl dd {  font-size:16px; margin-top:27px; padding-left:20px;}
  .list ul li .txt > div dl dd a{ color:rgba(255,255,255,1); width:50%; display:inline-block; float:left; margin-bottom:10px; line-height:1;}
  .list ul li .txt > div dl dd a:hover{ color:rgba(255,255,255,1);}
@@ -51,27 +51,24 @@ transition:width 0.4s;
 -ms-transition:width 0.4s;
 }
 .list ul li .txt > div a:hover:after { width:100%;}
-.list ul li:nth-child(1) .img .bg{ background:url("http://www.simcere.com/images/apply_img01.jpg") no-repeat center top;}
- .list ul li:nth-child(2) .img .bg{ background:url("http://www.simcere.com/images/apply_img02.jpg") no-repeat center top;}
- .list ul li:nth-child(3) .img .bg{ background:url("http://www.simcere.com/images/apply_img03.jpg") no-repeat center top;}
- .list ul li:nth-child(4) .img .bg{ background:url("http://www.simcere.com/images/apply_img04.jpg") no-repeat center top;}
- .list ul li:nth-child(5) .img .bg{ background:url("http://www.simcere.com/images/apply_img05.jpg") no-repeat center top;}
- .list ul li:nth-child(6) .img .bg{ background:url("http://www.simcere.com/images/apply_img06.jpg") no-repeat center top;}
- .list ul li .txt { background:#353b91;}
- .list ul li .txt .tri {border-left: 20px solid  #353b91;}
- .list ul li:nth-child(2) .txt > div dl dt { background:url("http://www.simcere.com/images/icon02.png") no-repeat left center;}
- .list ul li:nth-child(3) .txt > div dl dt { background:url("http://www.simcere.com/images/icon03.png") no-repeat left center;}
- .list ul li:nth-child(4) .txt > div dl dt { background:url("http://www.simcere.com/images/icon04.png") no-repeat left center;}
- .list ul li:nth-child(5) .txt > div dl dt { background:url("http://www.simcere.com/images/icon05.png") no-repeat left center;}
- .list ul li:nth-child(6) .txt > div dl dt { background:url("http://www.simcere.com/images/icon06.png") no-repeat left center;}
+.list ul li:nth-child(1) .img .bg{ background:url("../image/apply_touxi.jpg") no-repeat center top;}
+.list ul li:nth-child(2) .img .bg{ background:url("../image/apply_huli.jpg") no-repeat center top;}
+.list ul li:nth-child(3) .img .bg{ background:url("../image/apply_xiaodu.jpg") no-repeat center top;}
+.list ul li:nth-child(4) .img .bg{ background:url("../image/apply_daili.jpg") no-repeat center top;}
+.list ul li .txt { background:#353b91;}
+.list ul li .txt .tri {border-left: 20px solid  #353b91;}
+.list ul li:nth-child(2) .txt > div dl dt { background:url("../image/huli.png") no-repeat left center;}
+.list ul li:nth-child(3) .txt > div dl dt { background:url("../image/xiaodu.png") no-repeat left center;}
+.list ul li:nth-child(4) .txt > div dl dt { background:url("../image/daili.png") no-repeat left center;}
+.list ul li:nth-child(5) .txt > div dl dt { background:url("../image/xiaodu.png") no-repeat left center;}
 
  @media(max-width:768px){
     .list ul li{width:100%}
     .list ul li:nth-child(3), .list ul li:nth-child(4){width:100%}
-    .list ul li .txt > div dl dt{line-height: 30px;padding-left: unset;text-align: center;height:165px;background: url("http://www.simcere.com/images/icon01.png") no-repeat center center;}
-    .list ul li:nth-child(2) .txt > div dl dt{background: url("http://www.simcere.com/images/icon02.png") no-repeat center center;}
-    .list ul li:nth-child(3) .txt > div dl dt{background: url("http://www.simcere.com/images/icon03.png") no-repeat center center;}
-    .list ul li:nth-child(4) .txt > div dl dt{background: url("http://www.simcere.com/images/icon04.png") no-repeat center center;}
+    .list ul li .txt > div dl dt{line-height: 30px;padding-left: unset;text-align: center;height:165px;background: url("../image/huli.png") no-repeat center center;}
+    .list ul li:nth-child(2) .txt > div dl dt{background: url("../image/touxi.png") no-repeat center center;}
+    .list ul li:nth-child(3) .txt > div dl dt{background: url("../image/daili.png") no-repeat center center;}
+    .list ul li:nth-child(4) .txt > div dl dt{background: url("../image/xiaodu.png") no-repeat center center;}
 }
 
 
