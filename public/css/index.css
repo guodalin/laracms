@@ -37,7 +37,7 @@ position:relative;
 min-height:230px;
 }
  .list ul li .txt > div dl { color:#fff;}
- .list ul li .txt > div dl dt{ height:70px; padding-left:70px; line-height:70px;}
+ .list ul li .txt > div dl dt{ height:70px; padding-left:75px; line-height:70px;}
  .list ul li .txt > div dl dt { font-size:26px; font-weight:bold; color:#fff;background:url("../image/touxi.png") no-repeat left center;}
  .list ul li .txt > div dl dd {  font-size:16px; margin-top:27px; padding-left:20px;}
  .list ul li .txt > div dl dd a{ color:rgba(255,255,255,1); width:50%; display:inline-block; float:left; margin-bottom:10px; line-height:1;}
