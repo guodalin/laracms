@@ -25,6 +25,7 @@ $currentChildNavigations = frontend_current_child_navigation('desktop');
                 @endif
             </li>
             @endforeach
+            <li class="layui-nav-item" style="color:black;float:right"><a href="http://hnlangteng.com/" style="display:inline-block;padding:0 3px;">中</a> / <a href="http://aa.hnlangteng.com/" style="display:inline-block;padding:0 3px;">英</a></li>
         </ul>
         <ul class="layui-nav layui-nav-tree layui-nav-side layui-hide-lg layui-hide-md layui-hide-xs" style="top:60px;right:0px;left: unset;background-color:#393D49">
             <li class="layui-nav-item"><a href="/" style="color: rgba(255,255,255,.7)">首页</a></li>
@@ -40,6 +41,7 @@ $currentChildNavigations = frontend_current_child_navigation('desktop');
                 @endif
             </li>
             @endforeach
+            <li class="layui-nav-item" style="color:black;"><a href="http://hnlangteng.com/" style="display:inline-block;padding-right:3px;color: rgba(255,255,255,.7)">中 / </a><a href="http://aa.hnlangteng.com/" style="display:inline-block;padding-left:3px;color: rgba(255,255,255,.7)">英</a></li>
         </ul>
          <ul class="layui-nav fly-nav-user">
             {{--  @guest  --}}
