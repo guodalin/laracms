@@ -148,7 +148,7 @@ class BlockHandler
         $content = is_json($block->content) ? json_decode($block->content) : new \stdClass();
         $category_id = get_value($content, 'category_id', 0);
 
-        return Category::find($category_id)->articles()->active()->orderBy("views", "desc")->recent()->offset(0)->limit(get_value($content, 'display', 10))->get();
+        return Category::find($category_id)->articles()->active()->orderBy("order", "desc")->recent()->offset(0)->limit(get_value($content, 'display', 10))->get();
     }
 
 
