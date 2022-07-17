@@ -37,7 +37,7 @@ class UsersController extends Controller
     {
         static::$activeNavId = 'system.users';
     }
-    
+
     /**
      * 列表
      *
@@ -50,7 +50,7 @@ class UsersController extends Controller
     {
         $this->authorize('manage', $user);
 
-        $users = $user->withOrder($request->sortField, $request->sortOrder)->paginate(config('administrator.paginate.limit'));
+        $users = $user->withOrder($request->sortField, 'desc')->paginate(config('administrator.paginate.limit'));
 
         return backend_view('users.index', compact('users'));
     }
@@ -106,7 +106,7 @@ class UsersController extends Controller
         $roles = Role::get()->pluck('name', 'remarks')->toArray();
         $userRoles = $user->roles()->get();
         $userRoles = $user->roles()->pluck('name', 'name')->toArray();
-        
+
         return backend_view('users.create_and_edit', compact('user','roles', 'userRoles'));
     }
 
