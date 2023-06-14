@@ -45,11 +45,34 @@
                         {{ method_field('DELETE') }}
                     </form>
                 </div> --}}
+                <div class="uploader-files file-list file-list-lg" data-drag-placeholder="暂无内容.">
+                    @foreach($article->annex as $item)
+                        @php
+                            $item = $item->toArray();
+                        @endphp
+                        <div class="file file-static" data-id="{{$item['id']}}">
+                            <div class="file-wrapper">
+                                <div class="file-icon">
+                                    <div class="file-icon-image" style="background-image: url('{{ asset('vendor/laracms/images/icon-file.png') }}')"></div>
+                                </div>
+                                <div class="content">
+                                    <div class="file-name">{{ $item['name'] }}</div>
+                                    <div class="file-size small text-muted">{{ byte_to_size($item['size']) }}</div>
+                                </div>
+                                <div class="actions">
+                                    <a class="btn btn-link btn-download-file" target="_blank" href="{{ $item['url'] }}" title="{{ $item['name'] }}" style="display:inline-block;" data-original-title="下载"><i class="icon icon-download-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
 
             {{-- <div class="layui-col-md4">
                 @include('frontend::layouts._side')
             </div> --}}
+
+            
 
         </div>
     </div>

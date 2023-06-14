@@ -100,8 +100,8 @@ return [
         
         // 附件
         'annex' => [
-            'size_limit' => 204857600000, // 单位：字节，默认：5MB (5242880 B)  // 104857600
-            'allowed_ext' => ['zip','rar','7z','gz'],
+            'size_limit' => 52428800, // 单位：字节，默认：5MB (5242880 B)  // 104857600
+            'allowed_ext' => ['zip', 'rar', '7z', 'gz', 'pdf'],
         ],
         
         // 文件
