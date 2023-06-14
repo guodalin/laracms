@@ -1,5 +1,6 @@
 @extends('frontend::layouts.app')
-
+<link rel="stylesheet" type="text/css" href="{{asset('vendor/laracms/plugins/zui/css/zui.min.css')}}">
+<link rel="stylesheet" href="{{asset('vendor/laracms/plugins/zui/lib/uploader/zui.uploader.min.css')}}">
 @section('title', $title = $article->title )
 @section('description', empty($article->description) ? $article->description : config('system.common.basic.description','') )
 @section('keywords', empty($article->keywords) ? $article->keywords : config('system.common.basic.keywords','') )
